@@ -213,6 +213,8 @@ Index général : [awesome-fm-1 → « Related M-VAVE projects »](https://githu
 
 C'est ce qui change le plus le son : remplacer les simulations de baffle par n'importe quel WAV (captures de vrais cabinets, packs gratuits type Bogren Digital, etc.).
 
+> 🎛️ Et ce n'est pas limité aux cabs : voir **[`docs/ir-hacking.md`](ir-hacking.md)** — guide du détournement des slots IR en effets (résonateurs, formants, combs, rooms, lo-fi) — et **[`tools/make_irs.py`](../tools/make_irs.py)**, générateur Python de 12 IRs d'effets prêtes à écrire dans les slots.
+
 **Pièges connus (mesurés par le projet cubebaby-editor) :**
 
 - CubeSuite **ne resample pas** : une IR 44,1 kHz écrite telle quelle devient ~9 % plus courte et sonne **~1,5 demi-ton trop haut**. Toujours resampler à 48 kHz.
