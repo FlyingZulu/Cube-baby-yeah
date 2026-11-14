@@ -236,6 +236,8 @@ C'est **LE projet open source qui manque pour le Cube Baby guitare** : mapper sa
 
 ### 3. Contrôle MIDI externe
 
+Le pédale n'a pas de prise MIDI DIN : tout passe par l'USB-MIDI (class-compliant). Le SysEx propriétaire y est certain (tout le protocole éditeur) ; les messages standards (Program Change / CC) ne sont pas documentés pour ce modèle mais existent sur ses sœurs (Tank Mini : `C0 [ID]` change de preset ; Blackbox : PC presets + CC on/off). **[`tools/midi_probe.py`](../tools/midi_probe.py)** teste tout ça sur le terrain : identify SysEx, balayage PC 0–5, sweep de CC, et édition live de paramètre (buffer RAM uniquement, rien d'écrit en flash).
+
 Le footswitch **Chocolate** (et Chocolate Plus, mode 6 « Manufacturer Device Control ») peut piloter le pédale via SysEx propriétaire. Voir [blackboxctl — docs](https://github.com/mendong/blackboxctl/blob/main/docs/reverse-engineering/official-docs.md) pour le mode en question.
 
 ### 4. Mises à jour firmware officielles
